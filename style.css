@@ -515,4 +515,405 @@ main {
   background: #8a1e28;
 }
 
+.unidad {
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
+.unidad-btn {
+  width: 100%;
+  background: #1a2a3a;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+.contenido-unidad {
+  display: none;
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+.semana-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+
+/* ===== MODAL PANEL DERECHO ===== */
+#modalSemanas {
+  display: none; /* por defecto oculto */
+}
+
+#modalSemanas.active {
+  display: block;
+}
+
+.modal-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  background: #162938; /* acorde a tu header */
+  padding: 20px;
+  border-left: 3px solid #0f1c27;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.4);
+  overflow-y: auto;
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* Animación deslizante */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Botones dentro del modal */
+#modalSemanas .btn {
+  background: #30475e;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+#modalSemanas .btn:hover {
+  background: #4b6584;
+}
+
+#modalSemanas .btn-danger {
+  background: #b02a37;
+}
+
+#modalSemanas .btn-danger:hover {
+  background: #8a1e28;
+}
+
+/* Estilo para la ventana emergente */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 999; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      background: rgba(0,0,0,0.6); 
+      justify-content: center; 
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff; 
+      padding: 20px; 
+      border-radius: 10px; 
+      width: 80%; 
+      max-width: 900px;
+      max-height: 90vh; 
+      overflow-y: auto;
+      animation: fadeInDown 0.5s;
+    }
+    .close-modal {
+      float: right; 
+      font-size: 22px; 
+      cursor: pointer; 
+      color: #333;
+    }
+    .semanas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .semana-card {
+      border: 1px solid #ccc; 
+      padding: 10px; 
+      border-radius: 8px; 
+      text-align: center;
+      background: #f9f9f9;
+    }
+    .semana-card h4 {
+      margin-bottom: 10px;
+    }
+    .semana-card .btn {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 3px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .semana-card .btn:hover {
+      background: #0056b3;
+    }
+
+    /* Estilo para la ventana emergente */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0,0,0,0.6); 
+  justify-content: center; 
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff; 
+  padding: 20px; 
+  border-radius: 10px; 
+  width: 80%; 
+  max-width: 900px;
+  max-height: 90vh; 
+  overflow-y: auto;
+  animation: fadeInDown 0.5s;
+}
+
+.close-modal {
+  float: right; 
+  font-size: 22px; 
+  cursor: pointer; 
+  color: #333;
+}
+
+.semanas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.semana-card {
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  border-radius: 8px; 
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.semana-card h4 {
+  margin-bottom: 10px;
+}
+
+.semana-card .btn {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 3px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.semana-card .btn:hover {
+  background: #0056b3;
+}
+
+
+/* ================== MODAL ================== */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0,0,0,0.6); 
+  justify-content: center; 
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff; 
+  padding: 20px; 
+  border-radius: 10px; 
+  width: 80%; 
+  max-width: 900px;
+  max-height: 90vh; 
+  overflow-y: auto;
+  animation: fadeInDown 0.5s;
+}
+
+.close-modal {
+  float: right; 
+  font-size: 22px; 
+  cursor: pointer; 
+  color: #333;
+}
+
+/* ================== SEMANAS ================== */
+.semanas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.semana-card {
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  border-radius: 8px; 
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.semana-card h4 {
+  margin-bottom: 10px;
+}
+
+.semana-card .btn {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 3px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.semana-card .btn:hover {
+  background: #0056b3;
+}
+
+/* ---------- Mejoras visuales ---------- */
+.muted { color:#e8e8f0; opacity:.9; }
+
+/* Contenedor bonito */
+.section.box {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 28px;
+  background: rgba(91, 76, 166, .62); /* morado translúcido */
+  border-radius: 14px;
+  box-shadow: 0 12px 24px rgba(0,0,0,.25);
+  color: #fff;
+}
+.section.box h2 { font-size: 1.9rem; margin-bottom: 10px; color:#fff; }
+
+/* ---------- Acordeón de Unidades ---------- */
+.accordion { display: grid; gap: 14px; }
+.accordion-item {
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(22,41,56,.45);
+}
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  background: #162938;
+  color: #fff;
+  cursor: pointer;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.accordion-header .chev { transition: transform .2s ease; }
+.accordion-item.open .chev { transform: rotate(180deg); }
+
+.accordion-body { display: none; padding: 16px; background: rgba(255,255,255,.06); }
+.accordion-item.open .accordion-body { display:block; }
+
+/* ---------- Semanas grid y tarjetas ---------- */
+.semana-bloque { margin-bottom: 18px; }
+.semana-titulo { color:#fff; margin-bottom: 8px; font-weight:700; }
+
+.semanas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.semana-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.18);
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  border:1px solid transparent;
+}
+.semana-card h4 { color:#162938; font-weight:700; margin-bottom:10px; }
+
+/* Glow rojito al hover */
+.semana-card.hover-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(255, 77, 77, .55);
+  border-color: rgba(255, 77, 77, .45);
+}
+
+/* Botones */
+.btn, .acciones a, .admin-actions .btn {
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:8px;
+  background:#162938;
+  color:#fff; text-decoration:none; border:none; cursor:pointer;
+  transition:filter .2s ease, transform .1s ease;
+}
+.btn:hover, .acciones a:hover, .admin-actions .btn:hover { filter:brightness(1.12); }
+.btn-danger { background:#b02a37; }
+
+/* Acciones cliente/admin */
+.acciones { display:flex; gap:10px; justify-content:center; margin-top:8px; }
+.admin-actions { display:flex; gap:10px; justify-content:center; margin-top:10px; }
+
+/* Tarjeta placeholder (sin archivos) */
+.card-empty {
+  background: rgba(255,255,255,.85);
+  color:#5c5c6a;
+  border: 2px dashed #c9c9d6;
+}
+.card-empty h4 { color:#5c5c6a; }
+
+/* Uploader admin */
+.admin-uploader { border: 1px dashed #fff; background: transparent; color:#fff; }
+.admin-uploader h4 { color:#fff; }
+
+/* --- Alineación y tamaño de tarjetas en semanas --- */
+.semanas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  justify-items: center;   /* centra cada tarjeta */
+  align-items: stretch;    /* mismas alturas */
+}
+
+.semana-card {
+  width: 100%;
+  max-width: 320px;        /* ancho consistente */
+}
+
+/* Bloque de semana con separación sutil */
+.semana-bloque {
+  padding: 8px 0 24px;
+  border-bottom: 1px dashed rgba(255,255,255,.18);
+}
+.semana-bloque:last-child { border-bottom: none; }
